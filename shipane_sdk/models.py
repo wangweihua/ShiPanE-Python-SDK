@@ -377,7 +377,7 @@ class Order(object):
         order.style = OrderStyle(kwargs['type'])
         order.price = kwargs['price']
         order.amount = kwargs.get('amount', 0)
-        order.amountProportion = kwargs.get('amountProportion')
+        order.amountProportion = kwargs.get('amountProportion', '')
         return order
 
     def __init__(self, id=None, action=None, security=None, amount=None, amountProportion=None, price=None, style=None,
